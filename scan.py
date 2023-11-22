@@ -30,3 +30,6 @@ def scan_book(book_path):
         # Save the text to a file
         with open(f'page_{i}.txt', 'w') as f:
             f.write(text)
+
+# Call the function with the path to your book
+scan_book('path_to_your_book.pdf')
