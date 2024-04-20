@@ -1,11 +1,6 @@
 # Personal File System
-Sure, here's a sample README.md file for your citizen file system application:
 
----
-
-# Citizen File System
-
-The Citizen File System is a robust application designed to manage and organize citizen information for a large population. It leverages Docker for containerization and PostgreSQL for data storage, providing scalability, reliability, and efficiency.
+The Personal File System is a robust application designed to manage and organize citizen information for a large population. It leverages Docker for containerization and PostgreSQL for data storage, providing scalability, reliability, and efficiency.
 
 ## Features
 
