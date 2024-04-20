@@ -5,8 +5,8 @@ import psycopg2
 # Connect to the PostgreSQL database
 conn = psycopg2.connect(
     host="localhost",
-    database="database_name",
-    user="username",
+    database="pfs_database",
+    user="admin",
     password="password"
 )
 
