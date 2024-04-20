@@ -1,72 +1,53 @@
 # Personal File System
-Sure, here's a sample README.md file for your citizen file system application:
 
----
-
-# Citizen File System
-
-The Citizen File System is a robust application designed to manage and organize citizen information for a large population. It leverages Docker for containerization and PostgreSQL for data storage, providing scalability, reliability, and efficiency.
+The Personal File System is a system designed to manage personal data and information for individuals. It provides functionalities to store, retrieve, update, and delete various types of personal files, such as documents, photos, contacts, and more.
 
 ## Features
 
-- **Scalable Architecture:** Built using Docker containers, allowing for easy scaling to accommodate the needs of a population of 1 billion citizens.
-- **Data Persistence:** Utilizes PostgreSQL database for persistent storage of citizen information, ensuring data integrity and reliability.
-- **Secure Access:** Implements security best practices to protect citizen data and prevent unauthorized access.
-- **Backup and Recovery:** Includes a backup strategy for the PostgreSQL database to prevent data loss and ensure recoverability.
-- **Compliance:** Designed with regulatory compliance in mind, ensuring adherence to relevant data protection laws and regulations.
-- **Monitoring and Maintenance:** Incorporates monitoring and logging functionality to track system performance and detect any issues, along with documentation and maintenance procedures for ease of management.
+- **File Management**: Easily upload, organize, and manage personal files.
+- **Data Security**: Implement robust security measures to protect sensitive personal information.
+- **Search and Retrieval**: Quickly search and retrieve files based on different criteria.
+- **User Authentication**: Authenticate users to ensure secure access to their personal data.
+- **User Permissions**: Define different levels of access permissions for users to manage their files.
+- **Backup and Restore**: Implement backup and restore mechanisms to prevent data loss.
 
-## Setup
+## Getting Started
 
-1. **Prerequisites:**
-   - Docker: Install Docker on your system following the official Docker documentation.
-   - PostgreSQL: Ensure PostgreSQL is installed and accessible on your Docker environment.
+To get started with the Personal File System, follow these steps:
 
-2. **Building the Docker Image:**
-   - Use the provided Dockerfile to build a custom PostgreSQL image tailored for the Citizen File System.
+1. **Clone the Repository**: Clone the Personal File System repository from GitHub to your local machine.
 
-3. **Running the Application:**
-   - Launch the PostgreSQL container using Docker, ensuring to specify any necessary environment variables and mount volumes for data persistence.
+    ```bash
+    git clone https://github.com/your_username/personal-file-system.git
+    ```
 
-4. **Deploying the Application:**
-   - Containerize the Citizen File System application using the provided Dockerfile, and deploy it to your Docker environment.
+2. **Set Up Environment**: Install the necessary dependencies and set up the environment. Ensure that Docker and PostgreSQL are installed on your machine.
 
-5. **Testing and Monitoring:**
-   - Thoroughly test the application to ensure functionality and performance, and set up monitoring and logging to track system metrics.
+3. **Database Initialization**: Initialize the PostgreSQL database by running the initialization script (`init.sql`). This script will create the necessary tables and schema for the Personal File System.
 
-## Usage
+4. **Build and Run Docker Containers**: Build the Docker image and run the Docker containers using Docker Compose.
 
-1. **Accessing the Application:**
-   - Connect to the deployed application using a web browser or API client, providing appropriate authentication credentials.
+    ```bash
+    docker-compose build
+    docker-compose up -d
+    ```
 
-2. **Managing Citizen Data:**
-   - Use the application interface to manage citizen information, including adding, updating, and retrieving citizen records.
+5. **Access the Application**: Access the Personal File System application through your web browser. You can configure the application URL and port in the Docker Compose configuration file (`docker-compose.yml`).
 
-3. **Backup and Recovery:**
-   - Follow the backup and recovery procedures outlined in the documentation to safeguard citizen data and ensure recoverability in case of data loss.
+6. **Start Managing Personal Files**: Once the application is running, you can start managing your personal files by uploading, organizing, and accessing them through the user interface.
 
-4. **Scaling the System:**
-   - Monitor system performance and scale resources as needed to accommodate the growing population and data volume.
+## Contributing
 
-## Security
+Contributions to the Personal File System are welcome! If you would like to contribute new features, enhancements, or bug fixes, please fork the repository, make your changes, and submit a pull request. Be sure to follow the contribution guidelines outlined in the repository.
 
-- Ensure that access to the application and database is secured using strong authentication mechanisms and access controls.
-- Regularly update and patch system components to address security vulnerabilities and mitigate potential risks.
+## License
 
-## Compliance
-
-- Ensure compliance with relevant data protection laws and regulations, including GDPR, HIPAA, etc., when handling citizen data.
-- Implement measures to safeguard privacy and ensure data integrity in accordance with regulatory requirements.
-
-## Documentation
-
-- Refer to the provided documentation for detailed information on system architecture, deployment process, maintenance procedures, and security considerations.
+The Personal File System is open-source software licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute the software as per the terms of the license.
 
 ## Support
 
-For any inquiries or assistance, please contact [qqshuyy@gmail.com](mailto:support@example.com).
+For any questions, issues, or feedback related to the Personal File System, please open a GitHub issue in the repository. Our team will be happy to assist you.
 
 ---
 
-Feel free to customize the README.md file further to include specific instructions, contact information, or additional details about your application.
-
+Thank you for using the Personal File System! We hope it helps you organize and manage your personal data effectively.
