@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3'
 
 services:
   pfs-postgres:
@@ -7,5 +7,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
       POSTGRES_DB: pfs_database
+    ports:
+      - "5432:5432"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
