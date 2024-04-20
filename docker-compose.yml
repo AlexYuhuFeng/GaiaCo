@@ -1,6 +1,7 @@
-version: '3'
+version: '3.9'
+
 services:
-  postgres:
+  pfs-postgres:
     image: postgres:latest
     environment:
       POSTGRES_USER: admin
@@ -8,10 +9,3 @@ services:
       POSTGRES_DB: pfs_database
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-  app:
-    build: .
-    depends_on:
-      - postgres
-    volumes:
-      - .:/app
-    command: python src/cli.py
