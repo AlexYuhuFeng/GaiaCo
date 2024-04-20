@@ -1,5 +1,7 @@
 # src/db.py
 
+# Import the tabulate library
+from tabulate import tabulate
 import psycopg2
 
 # Connect to the PostgreSQL database
@@ -38,17 +40,30 @@ def add_citizen(name, age, address):
         # Close the cursor
         cur.close()
 
+
+
 # Function to retrieve all citizen records
 def get_all_citizens():
     try:
         cur = conn.cursor()
         cur.execute("SELECT * FROM citizens")
         rows = cur.fetchall()
-        return rows
+
+        # Convert the rows to a list of lists
+        data = [list(row) for row in rows]
+
+        # Define the headers for the table
+        headers = ["ID", "Name", "Age", "Address"]
+
+        # Use tabulate to format the data as a table
+        table = tabulate(data, headers=headers, tablefmt="grid")
+
+        return table
     except (Exception, psycopg2.DatabaseError) as error:
         print("Error:", error)
     finally:
         cur.close()
+
 
 # Function to update a citizen record
 def update_citizen(citizen_id, name, age, address):

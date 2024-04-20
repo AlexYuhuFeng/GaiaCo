@@ -1,10 +1,14 @@
-# Use the official PostgreSQL image from Docker Hub
-FROM postgres:latest
+# Use the official Python image from Docker Hub
+FROM python:3.10
 
-# Set environment variables for PostgreSQL
-ENV POSTGRES_USER=admin
-ENV POSTGRES_PASSWORD=password
-ENV POSTGRES_DB=pfs_database
+# Set the working directory in the container
+WORKDIR /app
 
-# Copy the initialization script into the container
-COPY init.sql /docker-entrypoint-initdb.d/
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed dependencies specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Run the CLI when the container launches
+CMD ["python", "src/cli.py"]
